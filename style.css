@@ -1,17 +1,92 @@
-
-
-
-
-
-.bottomButton{
-    position: fixed;
-    bottom:40px;
-    right:40px;
-    background-color: coral;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
+body{
+    margin:0;
 }
-.bottomButton:hover{
-    background-color: orangered;
+@font-face{
+    font-family: Righteous-Regular;
+    src: url("resources/fonts/Righteous-Regular.ttf")
+}
+header{
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    position: fixed;
+    left:0;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background-color: white;
+}
+
+header img{
+    position: relative;
+    visibility: hidden;
+    height: 40px;
+    margin: 5px 5px 5px 5%;
+}
+header.sticky img{
+    visibility: visible;
+    transition: 1s;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 15px;
+}
+header ul li a{
+    position: relative;
+    color:white;
+    text-decoration: none;
+    font-family: Righteous-Regular, sans-serif;
+    font-size: 20px;
+    -webkit-text-stroke: 2px black;
+}
+
+header.sticky ul li a{
+    color:black;
+    -webkit-text-stroke: 0px;
+    transition: 0.6s;
+}
+
+.firstSection{
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    max-height: 1000px;
+    background: url("resources/backgroud-g.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+    text-align: center;
+}
+.firstSection img{
+    height: 30%;
+    margin: 50px 10px 10px 10px;
+}
+
+.secondSection{
+    width: 100%;
+    height: 1000px;
+    background-color: orange;
+    transform: skewY(10deg) scaleY(1.4);
+    display:flex;
+}
+.exampleCard{
+    
+}
+.thirdSection{
+    width: 100%;
+    height: 1000px;
+    background-color: gray;
 }
