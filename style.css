@@ -1,6 +1,7 @@
 body{
     margin:0;
 }
+
 @font-face{
     font-family: Righteous-Regular;
     src: url("resources/fonts/Righteous-Regular.ttf")
@@ -9,6 +10,16 @@ body{
     font-family: KaushanScript-Regular;
     src: url("resources/fonts/KaushanScript-Regular.ttf")
 }
+@media only screen and (max-device-width: 1200px) {
+    .firstSection {
+      background-attachment: scroll;
+    }
+}
+@keyframes buttonAnim{
+    from{right:-60px;}
+    to{right:30px};
+}
+
 header{
     width: 100%;
     height: 50px;
@@ -24,7 +35,6 @@ header{
 header.sticky{
     background-color: white;
 }
-
 header img{
     position: relative;
     visibility: hidden;
@@ -35,7 +45,6 @@ header.sticky img{
     visibility: visible;
     transition: 1s;
 }
-
 header ul{
     position: relative;
     display: flex;
@@ -62,27 +71,31 @@ header.sticky ul li a{
     transition: 0.6s;
 }
 
+
 .firstSection{
     width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    max-height: 1000px;
+    height: 40vh;
+    min-height: 400px;
+    max-height: 800px;
     background: url("resources/backgroud-g.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    background-attachment: fixed;
+    background-position: center;
 }
 .firstSection img{
-    height: 30%;
+    height: 40%;
     margin: 50px 10px 10px 10px;
 }
 
 
 .secondSection{
     width: 100%;
-    background-color: orange;
+    background-color: rgb(46, 46, 46);
     text-align: center;
 }
+
 .secondSection hr{
     margin: 0px;
     height: 4px;
@@ -92,7 +105,7 @@ header.sticky ul li a{
     margin: 0px;
     font-family:Righteous-Regular,sans-serif;
     letter-spacing: 2px;
-    color:white;
+    color:darkorange;
 }
 .secondSection div{
     padding: 30px 0px 30px 0px;
@@ -104,8 +117,8 @@ header.sticky ul li a{
 #exampleCard{
     width: 420px;
     height: 450px;
-    background-color: darkgray;
-    box-shadow: -10px -10px grey, 10px 10px grey;
+    background-color: grey;
+    box-shadow: -10px -10px darkorange, 10px 10px darkorange;
     padding: 0px;
     margin: 20px;
     display:flex;
@@ -132,12 +145,20 @@ header.sticky ul li a{
     height: 1000px;
     background-color: gray;
 }
-#upButton{
+
+.upButton{
     width: 40px;
     height: 40px;
     border-radius: 20px;
     background-color: darkorange;
     position: fixed;
-    right: 30px;
+    right:30px;
     bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Righteous-Regular, sans-serif;
+}
+#upButton:hover{
+    cursor: pointer;
 }

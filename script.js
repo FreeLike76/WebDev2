@@ -1,4 +1,6 @@
+let header = document.querySelector("header");
+let upButton = document.querySelector(".upButton");
+
 window.addEventListener("scroll",function(){
-    let header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 50);
 })
