@@ -89,6 +89,31 @@ header.sticky ul li a{
     margin: 50px 10px 10px 10px;
 }
 
+/* angled div */
+.slanted-div {
+    position: relative;
+    padding: 50px 0;
+    background:  rgb(46, 46, 46);
+    overflow: visible;
+    z-index: 1;
+}
+.slanted-div:before, .slanted-div:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: right top;
+    transform: skewY(-2deg);
+}
+  
+.slanted-div:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(2deg);
+}
 
 .secondSection{
     width: 100%;
@@ -152,13 +177,21 @@ header.sticky ul li a{
     border-radius: 20px;
     background-color: darkorange;
     position: fixed;
-    right:30px;
     bottom: 30px;
+    right:-60px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-family: Righteous-Regular, sans-serif;
+    z-index: 100;
 }
-#upButton:hover{
+.upButton:hover{
     cursor: pointer;
+}
+
+.anim{
+    animation-name: buttonAnim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    right:30px;
 }
