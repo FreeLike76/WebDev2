@@ -201,15 +201,12 @@ hr{
 .exampleCard h3{
     letter-spacing: 2px;
 }
-.exampleCard div{
+.exampleCard img{
     width: 400px;
     height: 300px;
     padding: 0px;
     border: 2px solid black;
     margin: 5px;
-    background: url("resources/exampleCard.png");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 
