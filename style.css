@@ -11,9 +11,46 @@
     from{right:-60px;}
     to{right:30px};
 }
+
+
 body{
     margin: 0;
 }
+
+
+/* angled div */
+.slanted-div {
+    position: relative;
+    padding: 50px 0;
+    background:  darkorange;
+    overflow: visible;
+    z-index: 1;
+}
+.slanted-div:before, .slanted-div:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: right top;
+    transform: skewY(-2deg);
+} 
+.slanted-div:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(2deg);
+}
+
+h2{
+    font-size: 2em;
+    margin: 0px;
+    font-family:Righteous-Regular,sans-serif;
+    letter-spacing: 2px;
+    color: white;
+}
+
 header{
     width: 100%;
     height: 50px;
@@ -58,7 +95,6 @@ header ul li a{
     font-size: 20px;
     -webkit-text-stroke: 1px black;
 }
-
 header.sticky ul li a{
     color:black;
     -webkit-text-stroke: 0px;
@@ -68,9 +104,7 @@ header.sticky ul li a{
 
 .firstSection{
     width: 100%;
-    height: 40vh;
-    min-height: 400px;
-    max-height: 800px;
+    height: 400px;
     background: url("resources/backgroud-g.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,64 +114,79 @@ header.sticky ul li a{
 }
 .firstSection img{
     height: 40%;
-    margin: 50px 10px 10px 10px;
+    margin: 50px 0px;
+}
+.newsSection{
+    width: 100%;
+    background-color: darkorange;
+    text-align: center;
+}
+.newsSection .newsGrid{
+    padding: 30px 0px 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    justify-content: space-around;
+}
+.newsCard{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(46, 46, 46);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    font-family: Righteous-Regular, sans-serif;
+    color:white;
+}
+.newsCard img{
+    width: 250px;
+    height: auto;
+}
+.newsCard:hover{
+    cursor: pointer;
+}
+#moreNews{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(46, 46, 46);
+    font-size: 5em;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+}
+#moreNews:hover{
+    cursor: pointer;
 }
 
-/* angled div */
-.slanted-div {
-    position: relative;
-    padding: 50px 0;
-    background:  rgb(46, 46, 46);
-    overflow: visible;
-    z-index: 1;
-}
-.slanted-div:before, .slanted-div:after {
-    content: '';
+.gallerySection{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    transform-origin: right top;
-    transform: skewY(-2deg);
-}
-  
-.slanted-div:after {
-    bottom: 0;
-    transform-origin: right bottom;
-    transform: skewY(2deg);
-}
-
-.secondSection{
-    width: 100%;
+    padding: 50px 0px;
     background-color: rgb(46, 46, 46);
     text-align: center;
 }
 
-.secondSection hr{
+hr{
     margin: 0px;
     height: 4px;
     background-color: white;
 }
-.secondSection h1{
-    margin: 0px;
-    font-family:Righteous-Regular,sans-serif;
-    letter-spacing: 2px;
-    color:darkorange;
-}
-.secondSection div{
+
+.gallerySection .galleryGrid{
     padding: 30px 0px 30px 0px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 440px);
     align-items: center;
     justify-content: space-around;
 }
-#exampleCard{
+.exampleCard{
     width: 420px;
     height: 450px;
     background-color: grey;
-    box-shadow: -10px -10px darkorange, 10px 10px darkorange;
+    box-shadow: -5px -5px darkorange, 5px 5px darkorange;
     padding: 0px;
     margin: 20px;
     display:flex;
@@ -146,10 +195,13 @@ header.sticky ul li a{
     justify-content: space-evenly;
     font-family: Righteous-Regular, sans-serif;
 }
-#exampleCard h3{
+.exampleCard:hover{
+    cursor: pointer;
+}
+.exampleCard h3{
     letter-spacing: 2px;
 }
-#exampleCard div{
+.exampleCard div{
     width: 400px;
     height: 300px;
     padding: 0px;
@@ -159,33 +211,47 @@ header.sticky ul li a{
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
+.contactSection{
+    width: 100%;
+    padding: 0px;
+    background-color: darkorange;
+    text-align: center;
+}
+.contactSection form{
+    width: 600px;
+    margin:30px auto;
+    height: 150px;
+    background-color:rgb(46, 46, 46);
+    font-family: Righteous-Regular, sans-serif;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contactSection input[type="button"]{
+    width:30%;
+    margin: 0px auto;
+    border: none;
+    font-family: Righteous-Regular, sans-serif;
+}
+
 footer{
     width: 100%;
     padding: 50px 0;
     background-color: grey;
     text-align: center;
 }
-footer h1{
-    margin: 0px;
-    font-family:Righteous-Regular,sans-serif;
-    letter-spacing: 2px;
-}
-footer hr{
-    margin: 0px;
-    height: 4px;
-    background-color: white;
-}
-footer h1{
-    color:white;
-    font-family: Righteous-Regular,sans-serif;
-}
-footer div{
+
+footer .endGrid{
     padding: 30px 0px 30px 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 340px);
     justify-content: space-around;
 }
-footer div .endCard{
+
+.endCard{
     width: 280px;
     height: 300px;
     margin: 20px 20px 20px 20px;
@@ -193,8 +259,8 @@ footer div .endCard{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     font-family: Righteous-Regular,sans-serif;
+    color:white;
 }
 .endCard img{
     width: 250px;
@@ -208,7 +274,7 @@ footer div .endCard{
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    background-color: darkorange;
+    background-color: red;
     position: fixed;
     bottom: 30px;
     right:-60px;
