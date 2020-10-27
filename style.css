@@ -1,6 +1,6 @@
-@media (max-width: 1200px) {
-    .firstSection{
-        background-attachment: scroll;
+@media all and (max-device-width: 1280px) {
+    .upButton{
+        display: none;
     }
 }
 @font-face{
