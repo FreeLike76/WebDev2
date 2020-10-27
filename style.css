@@ -274,7 +274,8 @@ footer .endGrid{
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    background-color: red;
+    border: 6px solid  rgb(46, 46, 46);
+    background-color: darkorange;
     position: fixed;
     bottom: 30px;
     right:-60px;
