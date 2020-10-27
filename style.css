@@ -231,7 +231,8 @@ hr{
 footer{
     width: 100%;
     padding: 50px 0;
-    background-color: grey;
+    background: -webkit-linear-gradient(top,grey, rgb(73, 73, 73));
+    background: -moz-linear-gradient(top,grey, rgb(73, 73, 73));
     text-align: center;
 }
 
