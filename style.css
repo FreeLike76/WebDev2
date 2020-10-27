@@ -1,8 +1,3 @@
-@media all and (max-device-width: 1280px) {
-    .upButton{
-        display: none;
-    }
-}
 @font-face{
     font-family: Righteous-Regular;
     src: url("resources/fonts/Righteous-Regular.ttf")
@@ -109,12 +104,11 @@ header.sticky ul li a{
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    background-attachment: fixed;
     background-position: center;
 }
 .firstSection img{
     height: 40%;
-    margin: 50px 0px;
+    margin: 100px 0px 0px 0px;
 }
 .newsSection{
     width: 100%;
