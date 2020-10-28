@@ -280,6 +280,11 @@ footer .endGrid{
 .upButton:hover{
     cursor: pointer;
 }
+@media screen and (max-device-width: 1079px){
+    .upButton{
+        display: none;
+    }
+}
 
 .anim{
     animation-name: buttonAnim;
